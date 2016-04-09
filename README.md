@@ -28,6 +28,12 @@ npm install fast-csv
 cd sailsHU
 sails lift
 ````
+Se aparecer a seguinte mensagem do Sails pode utilizar a opção a <strong>3</strong>, drop.
+
+````
+warn: ** DO NOT CHOOSE "2" or "3" IF YOU ARE WORKING WITH PRODUCTION DATA **
+prompt: ?:  
+````
 
 ###### * NOTE
 Após o comando `sails lift` a aplicação carregarar todos os dados do CSV da pasta `sailsHU/artefatos` no banco de dados.
