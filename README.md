@@ -14,7 +14,7 @@ Os dados de cidade não foram desnormalizados o que pode afetar o requisito perf
 
 
 
-#### Comandos para isntalar as dependências da API
+#### Comandos para instalar as dependências da API
 
 ###### Para instalar as dependências
 
