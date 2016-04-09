@@ -164,6 +164,14 @@ curl --data "query=Mer" http://localhost:1337/hotel/search
 
 * é necessário informar ou o `param` `id` ou o `city`
 
+##### Exemplo
+
+````code
+curl --data "city=Araruama&startDate=5/3/2016&endDate=5/4/2016" http://localhost:1337/hotel/check
+````
+
+
+
 ##### Response
 
 ````json
@@ -211,6 +219,12 @@ Este recurso não está sendo utilizado pelo app mas server para listar os dados
 </table>
 
 * é necessário informar ou o `param` `ids` ou o `city`
+
+##### Exemplo
+
+````code
+curl --data "ids=1,2&startDate=5/3/2016&endDate=5/4/2016" http://localhost:1337/disp/check
+````
 
 ##### Response
 ````json
