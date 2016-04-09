@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Desafio</string>
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_place_search">Busca</string>
+    <string name="title_activity_hotel_result">Hotéis</string>
+
+    <!-- main -->
+
+    <string name="check_end_date_error">A data de saída não pode ser menor que a data de entrada</string>
+    <string name="button_search_label">Pesquisar por hotéis</string>
+    <string name="query_hint">Digite uma cidade ou hotel</string>
+    <string name="from_date_label">Entrada</string>
+    <string name="to_date_label">Saída</string>
+    <string name="query_label">Local de destino</string>
+
+    <!-- Search hotel result -->
+    <string name="result_error">Ocorreu um erro na busca.</string>
+    <string name="empty_result">A busca não enconrou nenhum resultado.</string>
+    <string name="button_try_again">Tentar novamente.</string>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+
+    <color name="action_bar">#173863</color>
+    <color name="theme_primary">#173863</color>
+    <color name="theme_secondary">#173863</color>
+    <color name="font_blue">#3C5369</color>
+    <color name="font_gray">#656565</color>
+    <color name="font_black">#000000</color>
+    <color name="button_primary">#FC7924</color>
+    <color name="background_default">#FFFFFF</color>
+
+
+
+</resources>
