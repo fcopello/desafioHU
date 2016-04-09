@@ -173,6 +173,7 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
     "updatedAt": "2016-04-09T01:45:38.443Z"
   }
 ]
+````
 
 
 #### `'GET /disp/check'`<br/>
