@@ -136,12 +136,12 @@ Este recurso não está sendo utilizado pelo app mas server para listar os dados
 <tr>
 <td>startDate</td>
 <td>date (M/d/yyyy)</td>
-<td>nome da cidade</td>
+<td>data de entrada</td>
 </tr>
 <tr>
 <td>endDate</td>
 <td>date (M/d/yyyy)</td>
-<td>nome da cidade</td>
+<td>data de saída</td>
 </tr>
 </table>
 
