@@ -28,7 +28,7 @@ npm install fast-csv
 cd sailsHU
 sails lift
 ````
-Se aparecer a seguinte mensagem do Sails pode utilizar a opção a <strong>3</strong>, drop.
+Se aparecer a seguinte mensagem do Sails pode utilizar a opção <strong>3</strong>, drop.
 
 ````
 warn: ** DO NOT CHOOSE "2" or "3" IF YOU ARE WORKING WITH PRODUCTION DATA **
