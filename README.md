@@ -34,6 +34,17 @@ Após o comando `sails lift` a aplicação carregarar todos os dados do CSV da p
 Essa operação poderá levar alguns minutos principalmente dado ao grande número de registros do arquivo disp.csv. 
 Dependendo da máquina pode ocorrer algum problema de timeout no ORM do Sails, por isso os registros são totalmente removidos a cada `lift`.
 
+#### Controllers
+
+`api/controllers/HotelController`<br/>
+`api/controllers/DispController`
+
+###### Blueprints
+`'GET /hotel/search': 'HotelController.search'`<br/>
+`'GET /hotel/check': 'HotelController.check'`<br/>
+`'GET /disp/check': 'DispController.check'`<br/>
+
+
 #### Resources
 
 

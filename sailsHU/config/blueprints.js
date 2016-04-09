@@ -160,5 +160,5 @@ module.exports.blueprints = {
   // defaultLimit: 30
 'GET /hotel/search': 'HotelController.search',
 'GET /hotel/check': 'HotelController.check',
-'GET /disp/check': 'HotelController.check'
+'GET /disp/check': 'DispController.check'
 };
