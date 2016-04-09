@@ -116,7 +116,6 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 
 ####### Response
 ````json
-
 [
   {
     "id": 27,
@@ -130,7 +129,7 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 ````
 
 #### `'GET /hotel/check'`<br/>
-> Método utilizado pelo app para checar a disponibilidade.
+> Método utilizado pelo app para checar a disponibilidade. A aplicação verifica a disponibilidade do intervalo de datas através de consulta e map/reduce no controller. Só serão retornados hotéis que possuem disponibilidade em todas as datas contidas no invervalo selecionado pelo usuário. Ou seja, se o usuário informar um período entre os dias 4 e 6 e o dia 5 não tiver disponibilidade, o hotel não será listado.
 
 <table>
 <tr>
@@ -163,8 +162,17 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 * é necessário informar ou o `param` `id` ou o `city`
 
 ##### Response
-Método utilizado pelo app para verficiação de hotéis com disponibilidade.
-O mesmo response do recurso anterior. A API verifica a disponibilidade do intervalo de datas através de consulta e map/reduce no controller e o response final são registro de hotéis. Só são retornados hotéis que possuem disponibilidade em todas as datas contidas no invervalo selecionado pelo usuário. Ou seja, se o usuário informar um período entre os dias 4 e 6 e o dia 5 não tiver disponibilidade, o hotel não será listado.
+
+````json
+[
+  {
+    "id": 27,
+    "name": "Mercure Grand Jebel Hafeet ",
+    "city": "Rio De Janeiro",
+    "createdAt": "2016-04-09T01:45:38.443Z",
+    "updatedAt": "2016-04-09T01:45:38.443Z"
+  }
+]
 
 
 #### `'GET /disp/check'`<br/>
