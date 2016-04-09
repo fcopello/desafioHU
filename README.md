@@ -28,7 +28,7 @@ npm install fast-csv
 cd sailsHU
 sails lift
 ````
-Se aparecer a seguinte mensagem do Sails pode utilizar a opção <strong>3</strong>, drop.
+> Se aparecer a seguinte mensagem do Sails pode utilizar a opção <strong>3</strong>, drop.
 
 ````
 warn: ** DO NOT CHOOSE "2" or "3" IF YOU ARE WORKING WITH PRODUCTION DATA **
@@ -228,14 +228,14 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 ##### * Importante: 
 > É necessário configurar o IP do serviço (ip da rede ou do servicor) na classe `com.hotelurbano.desafio.api.HotelUrbanoAPI` para funcionar corretamente.
 
-##### O app possui três telas. 
+##### O app possui três telas: 
 <ul>
 <li>Tela principal com o formulário de busca.</li>
 <li>Tela de busca de cidades ou hotéis.</li>
 <li>Tela de resultado de hotéis com disponibildade.</li>
 </ul>
 
-##### Toolkit
+##### Toolkit:
 <ul>
 <li>Square Retrofit</li>
 <li>Material Design</li>
