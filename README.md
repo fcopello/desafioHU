@@ -191,25 +191,15 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 
 ##### Screenshots
 
-<table border="0">
-<tr>
-<td>
+###### Tela principal
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print1.png)
-</td>
-<td>
+###### Tela de busca
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print2.png)
-</td>
-</tr>
-<tr>
-<td>
+###### Date picker
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print3.png)
-</td>
-<td>
+###### Tela de resultado
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print4.png)
-</td>
-</tr>
-</table>
 
-![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print4.png)
+
 
 
