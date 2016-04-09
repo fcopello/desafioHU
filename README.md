@@ -230,7 +230,7 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 
 
 ##### * Importante: 
-> É necessário configurar o IP do serviço (ip da rede ou do servidor) na classe `com.hotelurbano.desafio.api.HotelUrbanoAPI` para funcionar corretamente.
+> É necessário configurar o IP do serviço (ip da máquina na rede ou do servidor) na classe `com.hotelurbano.desafio.api.HotelUrbanoAPI` na constante `API_ENDPOINT` para funcionar corretamente.
 
 ##### O app possui três telas: 
 <ul>
