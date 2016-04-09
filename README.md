@@ -124,8 +124,8 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
     "city": "Rio De Janeiro",
     "createdAt": "2016-04-09T01:45:38.443Z",
     "updatedAt": "2016-04-09T01:45:38.443Z"
-  },
-  .....
+  }
+
 ]
 
 ````
@@ -211,8 +211,8 @@ Este recurso não está sendo utilizado pelo app mas server para listar os dados
     "createdAt": "2016-04-09T00:29:04.274Z",
     "updatedAt": "2016-04-09T00:29:04.274Z",
     "id": 77392
-  },
-  .....
+  }
+
 ]
 ````
 
