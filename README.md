@@ -8,8 +8,9 @@ A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage d
 ##### * Importante: 
 Ao parsear as datas do arquivo disp.csv no `config/bootsrap.js` inseri o ano estático como <strong>2016</strong> para que a busca no app pudesse fazer sentido ao abrir o calendário com data atual.
 
-##### * Performance: 
-Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste. Não realizei um teste de carga mas não acredito que o serivço aguente 1000 requisições por segundo mesmo com todos os dados em memória.
+##### * Performance e outros: 
+Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste. Além disso o meu resultado de busca é impreciso uma vez que trago cidades ou hotéis naquela cidade (caso a busca seja por cidade).
+<br/>Não realizei um teste de carga mas não acredito que o serivço aguente 1000 requisições/segundo (conforme estava na descrição do desafrio) mesmo com todos os dados em memória.
 
 
 
@@ -190,6 +191,22 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 
 ##### Screenshots
 
-
-
+<table border="0">
+<tr>
+<td>
+![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print1.png)
+</td>
+<td>
+![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print2.png)
+</td>
+</tr>
+<tr>
+<td>
+![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print3.png)
+</td>
+<td>
+![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print4.png)
+</td>
+</tr>
+</table>
 
