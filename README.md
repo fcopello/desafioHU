@@ -9,7 +9,7 @@ A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage d
 Ao parsear as datas do arquivo disp.csv no `config/bootsrap.js` inseri o ano estático como <strong>2016</strong> para que a busca no app funcionasse corretamente ao se utilizar o calendário com data atual.
 
 ##### * Performance e outros: 
-Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste. Além disso o meu resultado de busca é impreciso uma vez que trago cidades ou hotéis naquela cidade (caso a busca seja por cidade).
+Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste.
 <br/>Não realizei um teste de carga mas não acredito que o serivço aguente 1000 requisições/segundo (conforme estava na descrição do desafrio) mesmo com todos os dados em memória.
 
 
@@ -42,10 +42,12 @@ Dependendo da máquina pode ocorrer algum problema de timeout no ORM do Sails, p
 
 #### Controllers
 
+`api/controllers/PlaceController`<br/>
 `api/controllers/HotelController`<br/>
 `api/controllers/DispController`
 
 ###### Blueprints
+`'GET /place/search': 'PlaceController.search'`<br/>
 `'GET /hotel/search': 'HotelController.search'`<br/>
 `'GET /hotel/check': 'HotelController.check'`<br/>
 `'GET /disp/check': 'DispController.check'`<br/>
@@ -53,8 +55,8 @@ Dependendo da máquina pode ocorrer algum problema de timeout no ORM do Sails, p
 
 #### Resources
 
-
-##### `'GET /hotel/search'`<br/>
+#### `'GET /place/search'`<br/>
+Método utilizado pelo app para a busca de cidades ou hotéis.
 
 <table>
 <tr>
@@ -65,7 +67,44 @@ Dependendo da máquina pode ocorrer algum problema de timeout no ORM do Sails, p
 <tr>
 <td>query</td>
 <td>text</td>
-<td>nome da cidade ou do hotel</td>
+<td>nome ou parte do nome da cidade ou do hotel</td>
+</tr>
+</table>
+
+Exemplo:
+
+````code
+curl --data "query=Araruama" http://localhost:1337/place/search
+````
+
+
+####### Response
+````json
+[
+  {
+    "key": 0,
+    "name": "Araruama",
+    "type": 1,
+    "createdAt": "2016-04-09T08:01:06.104Z",
+    "updatedAt": "2016-04-09T08:01:06.104Z",
+    "id": 3841
+  }
+]
+````
+
+
+#### `'GET /hotel/search'`<br/>
+
+<table>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Data</th>
+</tr>
+<tr>
+<td>query</td>
+<td>text</td>
+<td>nome ou parte do nome do hotel</td>
 </tr>
 </table>
 
@@ -74,10 +113,6 @@ Exemplo:
 ````code
 curl --data "query=Araruama" http://localhost:1337/hotel/search
 ````
-
-
-
-
 
 ####### Response
 ````json
@@ -95,7 +130,8 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 
 ````
 
-##### `'GET /hotel/check'`<br/>
+#### `'GET /hotel/check'`<br/>
+Método utilizado pelo app para checar a disponibilidade.
 
 <table>
 <tr>
@@ -128,10 +164,11 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 * é necessário informar ou o `param` `id` ou o `city`
 
 ##### Response
-O mesmo response do recurso anterior. A API verifica a disponibilidade do intervalo de datas através de consulta e map/reduce no controller e o response final são registro de hotéis.
+Método utilizado pelo app para verficiação de hotéis com disponibilidade.
+O mesmo response do recurso anterior. A API verifica a disponibilidade do intervalo de datas através de consulta e map/reduce no controller e o response final são registro de hotéis. Só são retornados hotéis que possuem disponibilidade em todas as datas contidas no invervalo selecionado pelo usuário. Ou seja, se o usuário informar um período entre os dias 4 e 6 e o dia 5 não tiver disponibilidade, o hotel não será listado.
 
 
-##### `'GET /disp/check'`<br/>
+#### `'GET /disp/check'`<br/>
 Este recurso não está sendo utilizado pelo app mas server para listar os dados do model Disp. Este recurso não checa a disponibilidade, apenas lista os registros dentro dos intervalos de datas.
 
 <table>
@@ -211,7 +248,7 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 ###### Tela principal
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print1.png)
 ###### Tela de busca
-![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print2.png)
+![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print0.png)
 ###### Date picker
 ![alt tag](https://s3-sa-east-1.amazonaws.com/desafiohu/print3.png)
 ###### Tela de resultado

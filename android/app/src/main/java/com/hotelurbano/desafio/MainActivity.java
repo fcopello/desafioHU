@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (place!=null) {
                 mQuery.setText(placeName);
                 mConfig.setPlaceName(placeName);
-                mConfig.setPlaceId(place.getId());
+                mConfig.setPlaceId(place.getKey());
                 mConfig.setType(place.getType());
                 mConfig.saveAsCurrent(this);
             }

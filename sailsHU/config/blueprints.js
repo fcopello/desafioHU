@@ -158,6 +158,7 @@ module.exports.blueprints = {
   ****************************************************************************/
 
   // defaultLimit: 30
+'GET /place/search': 'PlaceController.search',
 'GET /hotel/search': 'HotelController.search',
 'GET /hotel/check': 'HotelController.check',
 'GET /disp/check': 'DispController.check'

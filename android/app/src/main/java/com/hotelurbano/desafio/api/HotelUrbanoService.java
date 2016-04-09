@@ -1,6 +1,7 @@
 package com.hotelurbano.desafio.api;
 
 import com.hotelurbano.desafio.model.Hotel;
+import com.hotelurbano.desafio.model.Place;
 
 import java.util.List;
 
@@ -13,9 +14,9 @@ import retrofit.http.Query;
  */
 public interface HotelUrbanoService {
 
-    @GET("/hotel/search")
-    public void getHotels(@Query("query") String query,
-                          Callback<List<Hotel>> hotels);
+    @GET("/place/search")
+    public void getPlaces(@Query("query") String query,
+                          Callback<List<Place>> places);
 
     @GET("/hotel/check")
     public void getDisp(@Query("id") String id,

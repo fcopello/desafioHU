@@ -11,11 +11,7 @@ module.exports = {
 	 	if (req.param('query')!=null) {
 
 		 	Hotel.find({
-			   or : [
-			  {name : {'contains' : req.param('query')}},
-			  {city : {'contains' : req.param('query')}}
-			  ]
-			
+			  name : {'contains' : req.param('query')}
 			}).exec(function createCB(err, data){
 	  				
 	  				return res.send(data);
@@ -38,17 +34,13 @@ module.exports = {
 	 	if ((req.param('id')!=null || req.param('city')!=null) 
 	 		&& req.param('startDate')!=null && req.param('endDate')!=null) {
 			
-			console.log("startDate: " + req.param('startDate'));
-			console.log("endDate: " + req.param('endDate'));
-			console.log("id: " + req.param('id'));
-			console.log("city: " + req.param('city'));
 			
 			var startDate = new Date(req.param('startDate'));
 			var endDate = new Date(req.param('endDate'));
 			var diff = endDate-startDate;
 			var days = Math.floor(diff/1000/60/60/24)+1;
-			console.log("interval: " + days);
-
+			
+			//Find disp function
 			function findDisp(ids, req, res) {
 				Disp.find({where: {
 		   		  hotelId : ids, 
@@ -63,7 +55,7 @@ module.exports = {
 		  				
 				 });
 			}
-
+			//Find hotel function
 			function findHotel(array, req, res) {
 				Hotel.find({
 					  id : array
@@ -71,7 +63,8 @@ module.exports = {
 					 	return res.send(data);
 					 });
 			}
-
+			//map/reduce function to filter only the
+			//valid results
 			function mapReduceDisp(data, days) {
 				var array = []
 				var map = []
@@ -107,18 +100,18 @@ module.exports = {
   				array = array.filter(function(item) {
   					return item[1]>=days;
   				});
-  				console.log("array: " + array);
+  				
   				//Adding filtered result into new array
   				var filtered = [];
   				array.forEach(function(item){
   					filtered.push(item[0])
   				});
-  				console.log("filtered: " + filtered);
+  				
 
   				return filtered;
   				
 			}
-
+			//Do check with hotel Id
 			if (req.param('id')!=null && req.param('id')!=undefined) {
 				
 				var id = req.param('id');
@@ -126,7 +119,7 @@ module.exports = {
 				return findDisp(id, req, res);
 
 			} else {
-				
+				//Do check with city name
 				Hotel.find({
 				  city : req.param('city')
 				 }).exec(function createCB(err, data){
