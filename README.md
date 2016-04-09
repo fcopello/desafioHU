@@ -114,7 +114,7 @@ curl --data "query=Araruama" http://localhost:1337/place/search
 Exemplo:
 
 ````code
-curl --data "query=Araruama" http://localhost:1337/hotel/search
+curl --data "query=Mer" http://localhost:1337/hotel/search
 ````
 
 ####### Response
