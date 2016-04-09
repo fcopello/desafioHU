@@ -174,7 +174,7 @@ Implementei a tela da pasta artefato do desafio seguindo as convenções para mo
 ##### * Importante: 
 É necessário configurar o IP do serviço (ip da rede ou do servicor) na classe `com.hotelurbano.desafio.api.HotelUrbanoAPI` para funcionar corretamente.
 
-##### O app consiste possui três telas. 
+##### O app possui três telas. 
 <ul>
 <li>Tela principal com o formulário de busca.</li>
 <li>Tela de busca de cidades ou hotéis.</li>
