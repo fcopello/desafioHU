@@ -56,7 +56,7 @@ Dependendo da máquina pode ocorrer algum problema de timeout no ORM do Sails, p
 #### Resources
 
 #### `'GET /place/search'`<br/>
-Método utilizado pelo app para a busca de cidades ou hotéis.
+> Método utilizado pelo app para a busca de cidades ou hotéis.
 
 <table>
 <tr>
@@ -131,7 +131,7 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
 ````
 
 #### `'GET /hotel/check'`<br/>
-Método utilizado pelo app para checar a disponibilidade.
+> Método utilizado pelo app para checar a disponibilidade.
 
 <table>
 <tr>
