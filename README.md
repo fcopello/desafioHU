@@ -1,6 +1,6 @@
 # Desafio HU
 
-### API
+## API
 
 A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage de dados, está utilzando a configuração default do framework, sendo assim, não será necessário plugar em nenhum banco. Não é o melhor aproach mas para uma solução standalone funcionou melhor. 
 
@@ -125,7 +125,6 @@ curl --data "query=Araruama" http://localhost:1337/hotel/search
     "createdAt": "2016-04-09T01:45:38.443Z",
     "updatedAt": "2016-04-09T01:45:38.443Z"
   }
-
 ]
 
 ````
@@ -212,15 +211,11 @@ Este recurso não está sendo utilizado pelo app mas server para listar os dados
     "updatedAt": "2016-04-09T00:29:04.274Z",
     "id": 77392
   }
-
 ]
 ````
 
 
-
-
-
-### Android
+## Android
 
 Implementei a tela da pasta artefato do desafio seguindo as convenções para mobile e principalmente o app atual do Hotel Urbano.
 
