@@ -6,7 +6,7 @@ A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage d
 
 
 ##### * Importante: 
-Ao parsear as datas do arquivo disp.csv no `config/bootsrap.js` inseri o ano estático como <strong>2016</strong> para que a busca no app pudesse fazer sentido ao abrir o calendário com data atual.
+Ao parsear as datas do arquivo disp.csv no `config/bootsrap.js` inseri o ano estático como <strong>2016</strong> para que a busca no app funcionasse corretamente ao se utilizar o calendário com data atual.
 
 ##### * Performance e outros: 
 Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste. Além disso o meu resultado de busca é impreciso uma vez que trago cidades ou hotéis naquela cidade (caso a busca seja por cidade).
