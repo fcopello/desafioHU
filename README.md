@@ -2,7 +2,7 @@
 
 ## API
 
-A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage de dados, está utilzando a configuração default do framework, sendo assim, não será necessário plugar em nenhum banco. Não é o melhor aproach mas para uma solução standalone funcionou melhor. 
+A API foi desenvolvida utilzando sailsJS um framework WebMVC NodeJS. O storage de dados, está utilzando a configuração default do framework, sendo assim, não será necessário plugar em nenhum banco. Não é a melhor implementação para performance mas permite que o serviço tenha uma solução standalone. 
 
 
 ##### * Importante: 
