@@ -10,7 +10,7 @@ Ao parsear as datas do arquivo disp.csv no `config/bootsrap.js` inseri o ano est
 
 ##### * Performance e outros: 
 Os dados de cidade não foram desnormalizados o que pode afetar o requisito performance do teste.
-<br/>Não realizei um teste de carga mas não acredito que o serivço aguente 1000 requisições/segundo (conforme estava na descrição do desafrio) mesmo com todos os dados em memória.
+<br/>Não realizei um teste de carga mas não acredito que o serivço aguente 1000 requisições/segundo (conforme estava na descrição do desafio) mesmo com todos os dados em memória.
 
 
 
