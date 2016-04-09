@@ -21,8 +21,7 @@ module.exports.bootstrap = function(cb) {
   	Hotel.destroy({}).exec(function (err) {});
   	Place.destroy({}).exec(function (err) {});
   	Disp.destroy({}).exec(function (err) {});
-  	
-
+  
   	//Reading hotels
   	var streamHotel = fs.createReadStream("./artefatos/hoteis.csv");
  
