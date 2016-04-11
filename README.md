@@ -188,7 +188,7 @@ curl --data "city=Araruama&startDate=5/3/2016&endDate=5/4/2016" http://localhost
 
 
 #### `'GET /disp/check'`<br/>
-Este recurso não está sendo utilizado pelo app mas server para listar os dados do model Disp. Este recurso não checa a disponibilidade, apenas lista os registros dentro dos intervalos de datas.
+Este recurso não está sendo utilizado pelo app mas serve para listar os dados do model Disp. Este recurso não checa a disponibilidade, apenas lista os registros dentro dos intervalos de datas.
 
 <table>
 <tr>
