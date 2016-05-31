@@ -20,10 +20,8 @@ Os dados de cidade não foram desnormalizados o que pode afetar o requisito perf
 
 ````code
 sudo npm -g install sails
-npm install fast-csv
-npm install grunt-npm-install --save-dev
-npm install ejs
-npm install include-all --save
+cd sailsHU
+npm install
 ````
 
 ###### Para rodar a aplicação
